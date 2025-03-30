@@ -5,5 +5,6 @@
 1. 安装clang clangd python三个插件
 2. 安装cmake等插件(推荐)
 3. 将vscode文件夹复制到ros2工作空间中，重命名为`.vscode`，重启vscode
+4. 代码解析需要进行一次编译，使用`ctrl + shift + b`进行编译，生成compile_outputs文件
 ## 参考工作
 https://github.com/homalozoa/vscode_ros2_config
