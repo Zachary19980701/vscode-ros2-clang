@@ -1,0 +1,34 @@
+{
+    // 禁用VS Code内置的C/C++扩展功能，使用clangd代替
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.formatting": "Disabled",
+    // clangd配置
+    "clangd.path": "clangd",
+    "clangd.arguments": [
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}",
+        "--clang-tidy",
+        "--header-insertion=never"
+    ],
+    // ROS2环境变量配置
+    "terminal.integrated.env.linux": {
+        "CMAKE_MODULE_PATH": "/opt/ros/humble/share/catkin/cmake",
+        "ROS_DISTRO": "humble",
+        "ROS_ETC_DIR": "/opt/ros/humble/etc/ros",
+        "ROS_OS_OVERRIDE": "ubuntu",
+        "ROS_PACKAGE_PATH": "/opt/ros/humble/share",
+        "ROS_PYTHON_VERSION": "3",
+        "ROS_ROOT": "/opt/ros/humble/share",
+        "ROS_VERSION": "2",
+        "LD_LIBRARY_PATH": "/opt/ros/humble/lib",
+        "PYTHONPATH": "/opt/ros/humble/lib/python3.8/site-packages",
+        "AMENT_PREFIX_PATH": "/opt/ros/humble",
+        "CMAKE_PREFIX_PATH": "/opt/ros/humble"
+    },
+    // 编译命令配置
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
+    "git.autoRepositoryDetection": "subFolders",
+    "git.ignoreSubmodules": false,
+    "git.repositoryScanMaxDepth": 3
+}

@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ROS2: colcon build",
+            "type": "shell",
+            "command": "cd ${workspaceFolder} && source /opt/ros/humble/setup.bash && colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && python3 ${workspaceFolder}/.vscode/merge_compile_commands.py",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "ROS2: clean build",
+            "type": "shell",
+            "command": "cd ${workspaceFolder} && source /opt/ros/humble/setup.bash && rm -rf build install log && colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && python3 ${workspaceFolder}/.vscode/merge_compile_commands.py",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
